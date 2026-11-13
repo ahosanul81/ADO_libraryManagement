@@ -34,6 +34,10 @@
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,10 +72,12 @@
             // 
             // booksToolStripMenuItem
             // 
+            this.booksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addBookToolStripMenuItem1,
+            this.borrowBookToolStripMenuItem1});
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
             this.booksToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.booksToolStripMenuItem.Text = "Books";
-            this.booksToolStripMenuItem.Click += new System.EventHandler(this.booksToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
@@ -86,6 +92,33 @@
             this.borrowReportToolStripMenuItem.Name = "borrowReportToolStripMenuItem";
             this.borrowReportToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.borrowReportToolStripMenuItem.Text = "BorrowReport";
+            // 
+            // addBookToolStripMenuItem
+            // 
+            this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addBookToolStripMenuItem.Text = "Add Book";
+            this.addBookToolStripMenuItem.Click += new System.EventHandler(this.addBookToolStripMenuItem_Click);
+            // 
+            // borrowBookToolStripMenuItem
+            // 
+            this.borrowBookToolStripMenuItem.Name = "borrowBookToolStripMenuItem";
+            this.borrowBookToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.borrowBookToolStripMenuItem.Text = "Borrow Book";
+            // 
+            // addBookToolStripMenuItem1
+            // 
+            this.addBookToolStripMenuItem1.Name = "addBookToolStripMenuItem1";
+            this.addBookToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.addBookToolStripMenuItem1.Text = "Add Book";
+            this.addBookToolStripMenuItem1.Click += new System.EventHandler(this.addBookToolStripMenuItem1_Click);
+            // 
+            // borrowBookToolStripMenuItem1
+            // 
+            this.borrowBookToolStripMenuItem1.Name = "borrowBookToolStripMenuItem1";
+            this.borrowBookToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.borrowBookToolStripMenuItem1.Text = "Borrow Book";
+            this.borrowBookToolStripMenuItem1.Click += new System.EventHandler(this.borrowBookToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -113,6 +146,10 @@
         private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrowReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrowBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addBookToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem borrowBookToolStripMenuItem1;
     }
 }
 

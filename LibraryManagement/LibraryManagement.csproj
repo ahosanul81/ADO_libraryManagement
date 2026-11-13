@@ -53,11 +53,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormBooks.cs">
+    <Compile Include="Forms\FormAddBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormBooks.Designer.cs">
-      <DependentUpon>FormBooks.cs</DependentUpon>
+    <Compile Include="Forms\FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBorrowBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBorrowBooks.Designer.cs">
+      <DependentUpon>FormBorrowBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormMembers.cs">
       <SubType>Form</SubType>
@@ -65,13 +71,17 @@
     <Compile Include="Forms\FormMembers.Designer.cs">
       <DependentUpon>FormMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormBooks.resx">
-      <DependentUpon>FormBooks.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormAddBook.resx">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBorrowBooks.resx">
+      <DependentUpon>FormBorrowBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMembers.resx">
       <DependentUpon>FormMembers.cs</DependentUpon>

@@ -31,9 +31,22 @@ namespace LibraryManagement
 
         }
 
-        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+     
+
+        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormBooks fb = new FormBooks();
+           
+        }
+
+        private void addBookToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormAddBook ab = new FormAddBook();
+            ab.Show();
+        }
+
+        private void borrowBookToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormBorrowBooks fb = new FormBorrowBooks();
             fb.Show();
         }
     }

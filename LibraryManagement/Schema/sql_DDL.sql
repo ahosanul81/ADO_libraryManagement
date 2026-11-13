@@ -13,8 +13,10 @@ create table Members
 	MemberName varchar(50) not null,
 	Phone varchar(14),
 	Email varchar(30),
-	JoinDate datetime not null
+	JoinDate datetime not null,
+	Photo varbinary(max)
 )
+
 go
 
 create table Books 
@@ -36,11 +38,7 @@ create table BorrowRecord
 	BookId int references Books(BookId) not null,
 	MemberId int references Members(MemberId) not null,
 	IssueDate datetime not null,
-	DueDate datetime not null,
+	DueDate datetime,
 	ReturnDate datetime not null,
 
-)
-
-
-
-insert into Members (MemberName, Email,Phone,JoinDate) values()
+)     
