@@ -49,5 +49,17 @@ namespace LibraryManagement
             FormBorrowBooks fb = new FormBorrowBooks();
             fb.Show();
         }
+
+        private void borrowReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bookreport bp = new bookreport();
+            bp.Show();
+        }
+
+        private void membersReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMembersReport fm = new FormMembersReport(); 
+            fm.Show();
+        }
     }
 }

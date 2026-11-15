@@ -15,6 +15,7 @@ namespace LibraryManagement.Forms
 {
     public partial class FormAddBook : Form
     {
+        FormBorrowBooks books = new FormBorrowBooks();
         public FormAddBook()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace LibraryManagement.Forms
 
         private void FormAddBook_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = books.GetAllBooks();
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -67,12 +68,18 @@ namespace LibraryManagement.Forms
                     if (result > 0)
                     {
                         MessageBox.Show("A book added successful.");
-                        
+                        dataGridView1.DataSource = books.GetAllBooks();
+
                     }
 
                 }
                 con.Close();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

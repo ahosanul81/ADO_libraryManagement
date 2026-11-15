@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrowBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.borrowBookToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.membersReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Firebrick;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -50,7 +55,8 @@
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 25, 0, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(945, 86);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,14 +65,16 @@
             this.formsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.membersToolStripMenuItem,
             this.booksToolStripMenuItem});
+            this.formsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
-            this.formsToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.formsToolStripMenuItem.Size = new System.Drawing.Size(100, 36);
             this.formsToolStripMenuItem.Text = "Forms";
             // 
             // membersToolStripMenuItem
             // 
             this.membersToolStripMenuItem.Name = "membersToolStripMenuItem";
-            this.membersToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.membersToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.membersToolStripMenuItem.Text = "Members";
             this.membersToolStripMenuItem.Click += new System.EventHandler(this.membersToolStripMenuItem_Click);
             // 
@@ -76,22 +84,40 @@
             this.addBookToolStripMenuItem1,
             this.borrowBookToolStripMenuItem1});
             this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.booksToolStripMenuItem.Size = new System.Drawing.Size(270, 40);
             this.booksToolStripMenuItem.Text = "Books";
+            // 
+            // addBookToolStripMenuItem1
+            // 
+            this.addBookToolStripMenuItem1.Name = "addBookToolStripMenuItem1";
+            this.addBookToolStripMenuItem1.Size = new System.Drawing.Size(267, 40);
+            this.addBookToolStripMenuItem1.Text = "Add Book";
+            this.addBookToolStripMenuItem1.Click += new System.EventHandler(this.addBookToolStripMenuItem1_Click);
+            // 
+            // borrowBookToolStripMenuItem1
+            // 
+            this.borrowBookToolStripMenuItem1.Name = "borrowBookToolStripMenuItem1";
+            this.borrowBookToolStripMenuItem1.Size = new System.Drawing.Size(267, 40);
+            this.borrowBookToolStripMenuItem1.Text = "Borrow Book";
+            this.borrowBookToolStripMenuItem1.Click += new System.EventHandler(this.borrowBookToolStripMenuItem1_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.borrowReportToolStripMenuItem});
+            this.borrowReportToolStripMenuItem,
+            this.membersReportToolStripMenuItem});
+            this.reportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(108, 36);
             this.reportToolStripMenuItem.Text = "Report";
             // 
             // borrowReportToolStripMenuItem
             // 
             this.borrowReportToolStripMenuItem.Name = "borrowReportToolStripMenuItem";
-            this.borrowReportToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.borrowReportToolStripMenuItem.Size = new System.Drawing.Size(310, 40);
             this.borrowReportToolStripMenuItem.Text = "BorrowReport";
+            this.borrowReportToolStripMenuItem.Click += new System.EventHandler(this.borrowReportToolStripMenuItem_Click);
             // 
             // addBookToolStripMenuItem
             // 
@@ -106,25 +132,30 @@
             this.borrowBookToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.borrowBookToolStripMenuItem.Text = "Borrow Book";
             // 
-            // addBookToolStripMenuItem1
+            // pictureBox1
             // 
-            this.addBookToolStripMenuItem1.Name = "addBookToolStripMenuItem1";
-            this.addBookToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.addBookToolStripMenuItem1.Text = "Add Book";
-            this.addBookToolStripMenuItem1.Click += new System.EventHandler(this.addBookToolStripMenuItem1_Click);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(945, 547);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // borrowBookToolStripMenuItem1
+            // membersReportToolStripMenuItem
             // 
-            this.borrowBookToolStripMenuItem1.Name = "borrowBookToolStripMenuItem1";
-            this.borrowBookToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.borrowBookToolStripMenuItem1.Text = "Borrow Book";
-            this.borrowBookToolStripMenuItem1.Click += new System.EventHandler(this.borrowBookToolStripMenuItem1_Click);
+            this.membersReportToolStripMenuItem.Name = "membersReportToolStripMenuItem";
+            this.membersReportToolStripMenuItem.Size = new System.Drawing.Size(310, 40);
+            this.membersReportToolStripMenuItem.Text = "Members Report";
+            this.membersReportToolStripMenuItem.Click += new System.EventHandler(this.membersReportToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(945, 621);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -133,6 +164,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +182,8 @@
         private System.Windows.Forms.ToolStripMenuItem borrowBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addBookToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem borrowBookToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem membersReportToolStripMenuItem;
     }
 }
 
