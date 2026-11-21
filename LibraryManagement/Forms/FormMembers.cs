@@ -147,11 +147,9 @@ namespace LibraryManagement.Forms
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-
-
                 con.Open();
 
-                string query = "select * from Members";
+                string query = "select * from Members order by MemberId desc";
                 using (SqlDataAdapter da = new SqlDataAdapter(query, con))
                 {
                     da.Fill(members);
